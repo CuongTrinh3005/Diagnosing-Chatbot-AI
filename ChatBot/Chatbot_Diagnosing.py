@@ -47,6 +47,16 @@ def create_bag_of_words(sentence):
 
     return np.array([bag])
 
+def count_frequence_input(user_input, vocab_list):
+    list_of_word = word_tokenize(user_input.lower())
+    score = 0
+    for w in list_of_word:
+        if w in vocab_list:
+            score += 1
+
+    freq = score / len(vocab_list) * 100
+    return freq
+
 # Load models
 chatbot_model = load_model('chatbot.h5')
 diagnosing_model = load_model('Diagnosing.h5')
@@ -67,7 +77,7 @@ def chat():
                 response = content['responses']
         print("Bot: ", random.choice(response))
 
-        if tag == 'diseases':
+        if tag == 'diseases' and count_frequence_input(request, vocab) > 0.0:
             o_input = create_one_hot_symptoms(symptoms, request)
             o_input = np.array(o_input)
             o_input = o_input.reshape(1, 132)
