@@ -84,4 +84,32 @@ def chat():
             disease = diagnosing_model.predict(o_input)
             print('Bot: I think you have ', dic_code[np.argmax(disease)])
 
+        if tag == 'datetime' and count_frequence_input(request, vocab) > 0.0:
+            import datetime
+
+            x = datetime.datetime.now()
+            print('Bot: It is on', x.strftime("%A"), x)
+
+        if count_frequence_input(request, vocab) == 0.0:
+            try:
+                from googlesearch import search
+                print("Bot: Sorry, I can't help you, check some sites to know:")
+                query = request
+                num = 0
+                for i in search(query,  # The query you want to run
+                                tld='com',  # The top level domain
+                                lang='en',  # The language
+                                num=10,  # Number of results per page
+                                start=0,  # First result to retrieve
+                                stop=None,  # Last result to retrieve
+                                pause=2.0,  # Lapse between HTTP requests
+                                ):
+
+                    print(i)
+                    if num == 5:
+                        break
+                    num += 1
+            except:
+                print("Bot: Not response due to:\n1.bad connection.\n2.Too many requests in short time (DDOS consideration)")
+
 chat()

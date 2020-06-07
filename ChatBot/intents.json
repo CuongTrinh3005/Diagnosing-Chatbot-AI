@@ -1,7 +1,7 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "How is today", "What's new",
-         "Good morning", "Good afternoon", "Good evening", "activate"],
+         "Good morning", "Good afternoon", "Good evening", "activate", "alo", "hey"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Nice to see u"],
          "context_set": ""
         },
@@ -20,13 +20,7 @@
          "responses": ["You can call me Cuong.", "I'm Trinh Quoc Cuong!", "Call me Cuong for short"],
          "context_set": ""
         },
-        {"tag": "menu",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to buy",
-         "Something in your shop", "What u sell", "What can I buy"],
-         "responses": ["We sell some drink such as beer, tea, coffee, wine, soda, hope u like them!"],
-         "context_set": ""
-        },
-        {"tag": "hours",
+        {"tag": "working time",
          "patterns": ["when are you guys open", "what are your hours", "hours of operation", "time", "opening", "close"],
          "responses": ["We are open 7am-4pm Monday-Friday!"],
          "context_set": ""
@@ -34,18 +28,6 @@
         {"tag": "address",
           "patterns": ["Where", "Your shop", "Location", "locate", "How can I meet you", "I want to see u", "your address"],
           "responses": ["115/4 Tran Quoc Toan Street, Bien Hoa City, Dong Nai Province"],
-          "context_set": ""
-        },
-        {"tag": "order",
-          "patterns": ["I want to buy", "buy", "send it to me", "I want a cup", "I like", "I love", "Give a some", "Give me a",
-          "I need"],
-          "responses": ["Nice, do you want more?", "Let pick up something more","OK, Hope u enjoy it"],
-          "context_set": ""
-        },
-        {
-          "tag": "Bill",
-          "patterns": ["No", "Just enough"],
-          "responses": ["I see", "Thanks for your time", "Thanks for your order", "I will give the bill for you soon"],
           "context_set": ""
         },
         {
@@ -62,7 +44,7 @@
         {
           "tag": "introduce",
           "patterns": ["What are you", "Who are you", "What u doing", "How can you do", "about u"],
-          "responses": ["I am a chatbot assistant for giving your service about the user heath"],
+          "responses": ["I am a chatbot assistant for giving your service about the user heath. Give me all of your symptoms"],
           "context_set": ""
         },
         {
@@ -91,6 +73,120 @@
           "patterns": ["What can I do now", "Give me advice", "I feel not good", "I feel bad, unhealthy"],
           "responses": ["Ok, I'm here to help, give me more details", "I think you should calm down, relaxing, take a deep breath"],
           "context_set": ""
+        },
+        {
+          "tag": "Diabetes",
+          "patterns": ["What is Diabetes ? "],
+          "responses": ["Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high."],
+          "context_set": ""
+        },
+        {
+          "tag": "Diarrhea",
+          "patterns": ["What is Diarrhea ? "],
+          "responses": ["Diarrhea is loose, watery stools (bowel movements). You have diarrhea if you have loose stools three or more times in one day. Acute diarrhea is diarrhea that lasts a short time. It is a common problem. It usually lasts about one or two days, but it may last longer."],
+          "context_set": ""
+        },
+        {
+          "tag": "Fever",
+          "patterns": ["What is Fever ? "],
+          "responses": ["A fever is a temporary increase in your body temperature, often due to an illness. Having a fever is a sign that something out of the ordinary is going on in your body. For an adult, a fever may be uncomfortable, but usually isn't a cause for concern unless it reaches 103 F (39.4 C) or higher."],
+          "context_set": ""
+        },
+        {
+          "tag": "Cough",
+          "patterns": ["What is Cough ? "],
+          "responses": ["Coughing is a common reflex action that clears your throat of mucus or foreign irritants. While everyone coughs to clear their throat from time to time, a number of conditions can cause more frequent coughing."],
+          "context_set": ""
+        },
+        {
+          "tag": "Lung Cancer",
+          "patterns": ["What is Lung Cancer ? "],
+          "responses": ["Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale.\n\nLung cancer is the leading cause of cancer deaths worldwide."],
+          "context_set": ""
+        },
+        {
+          "tag": "Breast Cancer",
+          "patterns": ["What is Breast Cancer ? "],
+          "responses": ["Breast cancer is a disease in which cells in the breast grow out of control. There are different kinds of breast cancer. The kind of breast cancer depends on which cells in the breast turn into cancer. Breast cancer can begin in different parts of the breast."],
+          "context_set": ""
+        },
+        {
+          "tag": "High blood Pressure",
+          "patterns": ["What is High blood Pressure ? "],
+          "responses": ["High blood pressure is a common condition in which the long-term force of the blood against your artery walls is high enough that it may eventually cause health problems, such as heart disease"],
+          "context_set": ""
+        },
+        {
+          "tag": "Obesity",
+          "patterns": ["What is Obesity ? "],
+          "responses": ["Obesity is a disease where a person's weight is in an unhealthy range (BMI of 30.0-39.9). It is a disease that can lead to other health problems. Talk with your healthcare provider to better understand and treat obesity. Severe Obesity."],
+          "context_set": ""
+        },
+        {
+          "tag": "runny nose",
+          "patterns": ["What is runny nose ? "],
+          "responses": ["A runny nose is excess nasal drainage. It may be a thin clear fluid, thick mucus or something in between. The drainage may run out of your nose, down the back of your throat or both."],
+          "context_set": ""
+        },
+        {
+          "tag": "infection ",
+          "patterns": ["What is infection  ? "],
+          "responses": ["An infection occurs when a microorganism enters a person’s body and causes harm."],
+          "context_set": ""
+        },
+        {
+          "tag": "day ",
+          "patterns": ["How many days a week"],
+          "responses": ["There are 7 days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday"],
+          "context_set": ""
+        },
+        {
+          "tag": "minute",
+          "patterns": ["how many seconds per minute"],
+          "responses": ["There are 60s per minute."],
+          "context_set": ""
+        },
+        {
+          "tag": "hour",
+          "patterns": ["how many minutes per hour"],
+          "responses": ["There are 60 minutes."],
+          "context_set": ""
+        },
+        {
+          "tag": "all hours",
+          "patterns": ["how many hours per day"],
+          "responses": ["There are 24 hours."],
+          "context_set": ""
+        },
+        {
+          "tag": "doctor",
+          "patterns": ["who is doctor  ?"],
+          "responses": ["A doctor is someone who maintains or restores human health through the practice of medicine. He or she faces the challenge of diagnosing and treating human disease, ailments, injuries, pain or other conditions."],
+          "context_set": ""
+        },
+        {
+          "tag": "datetime",
+          "patterns": ["what is the date day today", "datetime"],
+          "responses": [""],
+          "context_set": ""
+        },
+        {
+          "tag": "language",
+          "patterns": ["Which language can you speak, Can you speak Vietnamese, Can you understand Vietnamese"],
+          "responses": ["I can speak and understand just only English"],
+          "context_set": ""
+        },
+        {
+          "tag": "top world hospital",
+          "patterns": ["top three 3 hospital in the world ?, top greatest hospital around the world, biggest hospital in the world"],
+          "responses": ["Top 3 hospital in the world: \nThe Mayo Clinic (Rochester, Minnesota), \nCleveland Clinic (Cleveland), \nSingapore General Hospital (Singapore)"],
+          "context_set": ""
+        },
+        {
+          "tag": "top Vietnam hospital",
+          "patterns": ["top five 3 hospital in Vietnam?, top greatest hospital Vietnam, biggest hospital in Vietnam"],
+          "responses": ["Top 3 hospital in Vietnam: \nBach Mai Hospital (Hanoi), \nSaint Paul Hospital (Ho Chi Minh City), \nVinmec Hospital (Ho Chi Minh City)"],
+          "context_set": ""
         }
-]
+      ]
 }
