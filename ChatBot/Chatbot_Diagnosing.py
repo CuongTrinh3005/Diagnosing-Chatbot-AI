@@ -1,3 +1,4 @@
+from matplotlib.pyplot import stem
 from tensorflow.keras.models import load_model
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
@@ -51,7 +52,7 @@ def count_frequence_input(user_input, vocab_list):
     list_of_word = word_tokenize(user_input.lower())
     score = 0
     for w in list_of_word:
-        if w in vocab_list:
+        if stemmer.stem(w) in vocab_list:
             score += 1
 
     freq = score / len(vocab_list) * 100
